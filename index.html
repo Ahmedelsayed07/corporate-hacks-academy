@@ -701,13 +701,13 @@ header .lang{font-size:14.5px;padding:8px 16px}
 
 .rail .stars{display:block;color:#D9A125;letter-spacing:2px;font-size:18px;margin-bottom:6px;font-style:normal}
 /* ---- scroll motion ---- */
-html.anim .rv{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s);will-change:opacity,transform}
-html.anim .rv.rv-l{transform:translateX(-40px)}
-html.anim .rv.rv-r{transform:translateX(40px)}
-html.anim .rv.rv-z{transform:scale(.92)}
-html.anim .rv.in{opacity:1;transform:none}
+html.anim .mo{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s);will-change:opacity,transform}
+html.anim .mo.mo-l{transform:translateX(-40px)}
+html.anim .mo.mo-r{transform:translateX(40px)}
+html.anim .mo.mo-z{transform:scale(.92)}
+html.anim .mo.in{opacity:1;transform:none}
 html.anim .px{will-change:transform}
-@media (prefers-reduced-motion:reduce){html.anim .rv{opacity:1!important;transform:none!important;transition:none!important}html.anim .px{transform:none!important}}
+@media (prefers-reduced-motion:reduce){html.anim .mo{opacity:1!important;transform:none!important;transition:none!important}html.anim .px{transform:none!important}}
 
 
 @media (max-width:900px){
@@ -721,6 +721,16 @@ html.anim .px{will-change:transform}
   .hcard .ctas{justify-content:center}
   .hcard .lead,.hcard .hero-note{margin-inline:auto}
 }
+
+details.rv .ans-bad{color:#b42318}
+details.rv .ans-bad b{color:#b42318}
+details.rv .ans-ok{color:#1e7a46;font-weight:600}
+details.rv .ans-ok b{color:#1e7a46}
+
+.price .offer{display:block;width:max-content;font-size:11.5px;font-weight:700;letter-spacing:.3px;color:#fff;background:#c0392b;border-radius:20px;padding:3px 10px;margin-bottom:6px}
+#app:not([dir="ltr"]) .price .offer{font-family:var(--f-ar);font-size:12.5px}
+.price s.was{font-size:.62em;font-weight:600;color:var(--muted);text-decoration-thickness:2px;text-decoration-color:#c0392b;margin-inline-end:6px}
+.track .price .offer{margin-inline:0}
 </style>
 
 <div id="app" dir="rtl" lang="ar">
@@ -929,7 +939,7 @@ b.addEventListener('click',function(){var v=cur();if(!v)return;b.style.display='
           <li><span class="ar">تحضير مقابلات بمجالك</span><span class="en">Interview prep for your field</span></li>
           <li><span class="ar">برامج للشركات والفرق · عرض سعر حسب الفريق</span><span class="en">Company and team programmes · quoted per team</span></li>
         </ul>
-        <div class="foot"><span class="price">12,999 <small><span class="ar">جنيه · فردي</span><span class="en">EGP · 1:1</span></small></span><span style="display:flex;gap:8px"><button class="btn btn-line" type="button" data-open="dlg-one"><span class="ar">التفاصيل</span><span class="en">Details</span></button><a class="btn btn-navy" href="#request" data-pick="one"><span class="ar">اطلب</span><span class="en">Request</span></a></span></div>
+        <div class="foot"><span class="price"><span class="offer"><span class="ar">خصم لفترة محدودة</span><span class="en">Limited-time offer</span></span><s class="was" aria-label="old price">12,999</s> 6,999 <small><span class="ar">جنيه · فردي</span><span class="en">EGP · 1:1</span></small></span><span style="display:flex;gap:8px"><button class="btn btn-line" type="button" data-open="dlg-one"><span class="ar">التفاصيل</span><span class="en">Details</span></button><a class="btn btn-navy" href="#request" data-pick="one"><span class="ar">اطلب</span><span class="en">Request</span></a></span></div>
       </article>
     </div>
     </div>
@@ -953,7 +963,7 @@ b.addEventListener('click',function(){var v=cur();if(!v)return;b.style.display='
       </div>
       <div class="track">
         <h3><span class="ar">متابعة فردية</span><span class="en">One-to-one</span></h3>
-        <span class="price">12,999 <small><span class="ar">جنيه</span><span class="en">EGP</span></small></span>
+        <span class="price"><span class="offer"><span class="ar">خصم لفترة محدودة</span><span class="en">Limited-time offer</span></span><s class="was" aria-label="old price">12,999</s> 6,999 <small><span class="ar">جنيه</span><span class="en">EGP</span></small></span>
         <p class="muted"><span class="ar">لو عندك مقابلة قريبة أو هدف محدد. ١٠ أماكن بس.</span><span class="en">For a near interview or a specific goal. Only 10 places.</span></p>
       </div>
     </div>
@@ -1098,7 +1108,7 @@ b.addEventListener('click',function(){var v=cur();if(!v)return;b.style.display='
           <li><span class="ar">تحضير مقابلات بمجالك</span><span class="en">Interview prep for your field</span></li>
           <li><span class="ar">برامج للشركات والفرق · عرض سعر حسب الفريق</span><span class="en">Company and team programmes · quoted per team</span></li>
         </ul>
-        <div class="foot"><span class="price">12,999 <small><span class="ar">جنيه · فردي</span><span class="en">EGP · 1:1</span></small></span><span style="display:flex;gap:8px"><button class="btn btn-line" type="button" data-open="dlg-one"><span class="ar">التفاصيل</span><span class="en">Details</span></button><a class="btn btn-navy" href="#request" data-pick="one"><span class="ar">اطلب</span><span class="en">Request</span></a></span></div>
+        <div class="foot"><span class="price"><span class="offer"><span class="ar">خصم لفترة محدودة</span><span class="en">Limited-time offer</span></span><s class="was" aria-label="old price">12,999</s> 6,999 <small><span class="ar">جنيه · فردي</span><span class="en">EGP · 1:1</span></small></span><span style="display:flex;gap:8px"><button class="btn btn-line" type="button" data-open="dlg-one"><span class="ar">التفاصيل</span><span class="en">Details</span></button><a class="btn btn-navy" href="#request" data-pick="one"><span class="ar">اطلب</span><span class="en">Request</span></a></span></div>
       </article>
     
   </div>
@@ -1162,7 +1172,7 @@ b.addEventListener('click',function(){var v=cur();if(!v)return;b.style.display='
       </div>
       <div class="track">
         <h3><span class="ar">متابعة فردية</span><span class="en">One-to-one</span></h3>
-        <span class="price">12,999 <small><span class="ar">جنيه</span><span class="en">EGP</span></small></span>
+        <span class="price"><span class="offer"><span class="ar">خصم لفترة محدودة</span><span class="en">Limited-time offer</span></span><s class="was" aria-label="old price">12,999</s> 6,999 <small><span class="ar">جنيه</span><span class="en">EGP</span></small></span>
         <p class="muted"><span class="ar">لو عندك مقابلة قريبة أو هدف محدد. ١٠ أماكن بس.</span><span class="en">For a near interview or a specific goal. Only 10 places.</span></p>
       </div>
     </div>
@@ -1293,7 +1303,7 @@ b.addEventListener('click',function(){var v=cur();if(!v)return;b.style.display='
           <select id="r_track">
             <option value="full">الدورة الكاملة · Full course — 2,499 EGP</option>
             <option value="self">Self-paced — 799 EGP</option>
-            <option value="one">متابعة فردية · One-to-one — 12,999 EGP</option>
+            <option value="one">متابعة فردية · One-to-one — 6,999 EGP (limited-time, was 12,999)</option>
             <option value="grad">خريج الدفعة الأولى · Cohort 1 graduate — سعر خاص · special price</option>
           </select></div>
         <div class="field"><label for="r_level"><span class="ar">مستواك دلوقتي</span><span class="en">Your current level</span></label>
@@ -1663,7 +1673,7 @@ b.addEventListener('click',function(){var v=cur();if(!v)return;b.style.display='
 <dialog id="dlg-one" class="dlg" aria-labelledby="t-one">
   <div class="dlg-head"><h2 id="t-one"><span class="ar">متابعة فردية وبرامج الشركات</span><span class="en">One-to-one and team programmes</span></h2><button class="x" type="button" data-close aria-label="Close">×</button></div>
   <ul class="ticks" style="margin-top:6px">
-    <li><span><b><span class="ar">متابعة فردية · ١٢٬٩٩٩ جنيه</span><span class="en">One-to-one · 12,999 EGP</span></b> — <span class="ar">لو عندك مقابلة قريبة أو هدف محدد. ١٠ أماكن بس.</span><span class="en">for a near interview or a specific goal. Only 10 places.</span></span></li>
+    <li><span><b><span class="ar">متابعة فردية · ٦٬٩٩٩ جنيه (خصم لفترة محدودة بدل ١٢٬٩٩٩)</span><span class="en">One-to-one · 6,999 EGP (limited-time, was 12,999)</span></b> — <span class="ar">لو عندك مقابلة قريبة أو هدف محدد. ١٠ أماكن بس.</span><span class="en">for a near interview or a specific goal. Only 10 places.</span></span></li>
     <li><span><b><span class="ar">تحضير مقابلات</span><span class="en">Interview preparation</span></b> — <span class="ar">أسئلة مجالك إنت، وإجابات بطريقة STAR، ومقابلة تجريبية.</span><span class="en">questions from your own field, STAR answers and a mock interview.</span></span></li>
     <li><span><b><span class="ar">برامج للشركات والفرق</span><span class="en">Company and team programmes</span></b> — <span class="ar">بنصمم البرنامج على شغل فريقك. السعر حسب العدد والمدة.</span><span class="en">designed around your team's work. Priced by team size and length.</span></span></li>
   </ul>
@@ -2100,7 +2110,7 @@ b.addEventListener('click',function(){var v=cur();if(!v)return;b.style.display='
     var PROG = {
       now:{n:'Speak English Now',lv:'A0 → A2',p:'2,499',h:'#register',pick:''},
       pro:{n:'Speak English Pro',lv:'B1 → C1',p:'4,999',h:'#request',pick:'pro'},
-      one:{n:['متابعة فردية','One-to-one coaching'],lv:'',p:'12,999',h:'#request',pick:'one'}
+      one:{n:['متابعة فردية','One-to-one coaching'],lv:'',p:'6,999',h:'#request',pick:'one'}
     };
     function sc(id){ for (var i = 0; i < SC.length; i++) if (SC[i].id === id) return SC[i]; return null; }
     function band(t){ return t <= 5 ? 'A1' : t <= 9 ? 'A2' : t <= 12 ? 'B1' : 'B1+ / B2'; }
@@ -2129,6 +2139,7 @@ b.addEventListener('click',function(){var v=cur();if(!v)return;b.style.display='
         var weakG = s.grammar.c / s.grammar.n < 0.6 || s.vocab.c / s.vocab.n < 0.6;
         if (missed && weakG) add({id:'review', k:'review', r:['غلطت أو مكنتش متأكد في ' + qa(missed) + '، ونتيجتك في القواعد أو المفردات أقل من ٦٠٪. كل سؤال معاه شرح بالعربي.','You missed or skipped ' + qe(missed) + ', and scored under 60% in grammar or vocabulary. Each question has an explanation.']});
       }
+      if (s) { var m0 = Q.filter(function(q){ return d.diag.ans[q.id] !== q.a; }).length; if (m0) add({id:'review', k:'review', r:['غلطت أو مكنتش متأكد في ' + qa(m0) + '. شوف الإجابة الصح وشرحها قبل ما تتمرّن أو تسجّل الفويس.','You missed or skipped ' + qe(m0) + '. See the correct answers and explanations before you practise or record your voice note.']}); }
       (MAP[g] || MAP.basics).forEach(function(id){ add({id:id, k:'sc', r:GOALR[g]}); });
       if (s && s.work.c / s.work.n < 0.75) ['disagree','angry'].forEach(function(id){ add({id:id, k:'sc', r:['نتيجتك في تواصل الشغل ' + an(s.work.c) + ' من ' + an(s.work.n) + '، والموقف ده بيقوّيها.','You scored ' + s.work.c + '/' + s.work.n + ' in workplace communication; this situation builds it.']}); });
       if (s) { var m2 = Q.filter(function(q){ return d.diag.ans[q.id] !== q.a; }).length; if (m2) add({id:'review', k:'review', r:['غلطت أو مكنتش متأكد في ' + qa(m2) + '، وكل واحد معاه شرح.','You missed or skipped ' + qe(m2) + '; each one has an explanation.']}); }
@@ -2285,7 +2296,7 @@ b.addEventListener('click',function(){var v=cur();if(!v)return;b.style.display='
           '<p><b>' + B('المشكلة: ','What to improve: ') + '</b>' + B(o.f[0], o.f[1]) + '</p>' +
           '<p><b>' + B('ليه مهم: ','Why it matters: ') + '</b>' + B(x.why[0], x.why[1]) + '</p>' +
           '<p><b>' + B('الهيكل اللي محتاجه:','The structure you need:') + '</b></p><p class="model" dir="ltr" lang="en">' + esc(x.m) + '</p>' +
-          (pr.n >= 2 ? '<p><b>' + B('مثال صح: ','A correct example: ') + '</b><q dir="ltr" lang="en">' + esc(good.t) + '</q></p>' : '') +
+          '<p><b>' + B('الإجابة الصح: ','The correct answer: ') + '</b><q dir="ltr" lang="en">' + esc(good.t) + '</q></p>' +
           '<div class="actions"><button class="btn btn-navy" type="button" id="scRetry">' + B('حاول تاني','Try again') + '</button></div></div>';
       }
       fb.innerHTML = h;
@@ -2318,6 +2329,17 @@ b.addEventListener('click',function(){var v=cur();if(!v)return;b.style.display='
       h += '<div class="next-card">' + (nx ? '<div><span class="eyebrow">' + B('خطوتك الجاية','Your next step') + '</span><h3>' + title(nx) + '</h3><p>' + B(nx.r[0], nx.r[1]) + '</p></div>' + actionBtn(nx, true)
         : '<div><span class="eyebrow">' + B('خلصت خطتك','Plan complete') + '</span><h3>' + B('برافو، خلصت كل خطوات الخطة','Well done, you finished every step') + '</h3><p>' + B('الخطوة الجاية الحقيقية: تمرين يومي مع تصحيح على صوتك في البرنامج المناسب ليك.','The real next step: daily practice with feedback on your voice in the programme that fits you.') + '</p></div><a class="btn btn-gold" href="' + pg.h + '"' + (pg.pick ? ' data-pick="' + pg.pick + '"' : '') + '>' + B('شوف البرنامج','See the programme') + '</a>') + '</div>';
       h += '<div class="me-grid"><div>';
+      // missed answers
+      if (d.diag) {
+        var miss = Q.filter(function(q){ return d.diag.ans[q.id] !== q.a; });
+        h += '<div class="card" id="reviewCard"><div class="card-h"><h3>' + B('إجاباتك: الصح والغلط','Your answers: right and wrong') + '</h3><span class="muted">' + B(an(miss.length) + ' للمراجعة', miss.length + ' to review') + '</span></div>';
+        if (!miss.length) h += '<p>' + B('جاوبت كل الأسئلة صح.','You answered every question correctly.') + '</p>';
+        miss.forEach(function(q){ var a = d.diag.ans[q.id];
+          h += '<details class="rv" open><summary dir="ltr" lang="en">' + esc(q.q) + '</summary><p class="ans-bad"><b>✗ ' + B('إجابتك: ','Your answer: ') + '</b>' + (a === -1 ? B('مش متأكد','Not sure') : '<bdi dir="ltr">' + esc(q.o[a]) + '</bdi>') + '</p>' +
+            '<p class="ans-ok"><b>✓ ' + B('الصح: ','Correct: ') + '</b><bdi dir="ltr">' + esc(q.o[q.a]) + '</bdi></p><p>' + B(q.ex[0], q.ex[1]) + '</p></details>'; });
+        if (miss.length && !d.done.review) h += '<div class="actions"><button class="btn btn-line btn-sm" type="button" data-mark="review">' + B('راجعتهم','I reviewed them') + '</button></div>';
+        h += '</div>';
+      }
       // plan
       h += '<div class="card"><div class="card-h"><h3>' + B('خطة التمرين','Practice plan') + '</h3><span class="muted">' + B(an(dn) + ' من ' + an(d.plan.length) + ' خلصوا', dn + ' of ' + d.plan.length + ' done') + '</span></div>' + bar(dn, d.plan.length) + '<ol class="plan">';
       d.plan.forEach(function(it){
@@ -2327,17 +2349,6 @@ b.addEventListener('click',function(){var v=cur();if(!v)return;b.style.display='
           '<small>' + B('ليه: ','Why: ') + B(it.r[0], it.r[1]) + '</small>' + (ok ? '' : actionBtn(it, false)) + '</div></li>';
       });
       h += '</ol></div>';
-      // missed answers
-      if (d.diag) {
-        var miss = Q.filter(function(q){ return d.diag.ans[q.id] !== q.a; });
-        h += '<div class="card" id="reviewCard"><div class="card-h"><h3>' + B('مراجعة الأسئلة','Answer review') + '</h3><span class="muted">' + B(an(miss.length) + ' للمراجعة', miss.length + ' to review') + '</span></div>';
-        if (!miss.length) h += '<p>' + B('جاوبت كل الأسئلة صح.','You answered every question correctly.') + '</p>';
-        miss.forEach(function(q){ var a = d.diag.ans[q.id];
-          h += '<details class="rv"><summary dir="ltr" lang="en">' + esc(q.q) + '</summary><p><b>' + B('إجابتك: ','Your answer: ') + '</b>' + (a === -1 ? B('مش متأكد','Not sure') : '<bdi dir="ltr">' + esc(q.o[a]) + '</bdi>') + '</p>' +
-            '<p><b>' + B('الصح: ','Correct: ') + '</b><bdi dir="ltr">' + esc(q.o[q.a]) + '</bdi></p><p>' + B(q.ex[0], q.ex[1]) + '</p></details>'; });
-        if (miss.length && !d.done.review) h += '<div class="actions"><button class="btn btn-line btn-sm" type="button" data-mark="review">' + B('راجعتهم','I reviewed them') + '</button></div>';
-        h += '</div>';
-      }
       h += '</div><div>';
       // results
       h += '<div class="card"><div class="card-h"><h3>' + B('نتيجة تحديد المستوى','Level check result') + '</h3>' + (d.diag ? '<span class="muted">' + dt(d.diag.at) + '</span>' : '') + '</div>';
@@ -2464,18 +2475,18 @@ b.addEventListener('click',function(){var v=cur();if(!v)return;b.style.display='
   document.documentElement.classList.add('anim');
   var rtl=function(){return document.documentElement.dir!=='ltr'};
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
-  function mark(el,cls,d){if(!el||el.classList.contains('rv')||el.closest('dialog,header,#ui'))return;el.classList.add('rv');if(cls)el.classList.add(cls);if(d)el.style.setProperty('--d',d+'s');io.observe(el)}
+  function mark(el,cls,d){if(!el||el.classList.contains('mo')||el.closest('dialog,header,#ui'))return;el.classList.add('mo');if(cls)el.classList.add(cls);if(d)el.style.setProperty('--d',d+'s');io.observe(el)}
   function scan(root){
     root.querySelectorAll('.sec-head,.vtwo .vtxt,.truth,.cohort .sec-head,.ft-cta').forEach(function(e){mark(e)});
-    root.querySelectorAll('.frame,.hcard .ph,.mas,.founder img').forEach(function(e){mark(e,'rv-z')});
-    root.querySelectorAll('.two > div:not(.frame)').forEach(function(e){mark(e,'rv-r')});
+    root.querySelectorAll('.frame,.hcard .ph,.mas,.founder img').forEach(function(e){mark(e,'mo-z')});
+    root.querySelectorAll('.two > div:not(.frame)').forEach(function(e){mark(e,'mo-r')});
     root.querySelectorAll('.xlist,.progs,.grid,.cards,.aud,.ben,.steps,.creds,.outc,.logos,.companies').forEach(function(list){
       [].slice.call(list.children).slice(0,12).forEach(function(c,i){mark(c,'',Math.min(i*0.08,.6))});
     });
     root.querySelectorAll('section .wrap > h2, section .wrap > p, .band, .strip, .rail-wrap').forEach(function(e){mark(e)});
   }
   scan(document);
-  document.addEventListener('cha:view',function(){setTimeout(function(){scan(document);document.querySelectorAll('.rv:not(.in)').forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0&&e.offsetParent)e.classList.add('in')})},30)});
+  document.addEventListener('cha:view',function(){setTimeout(function(){scan(document);document.querySelectorAll('.mo:not(.in)').forEach(function(e){var r=e.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0&&e.offsetParent)e.classList.add('in')})},30)});
   if(reduce)return;
   /* parallax: images drift a little slower than the page */
   var px=[].slice.call(document.querySelectorAll('.frame img,.hcard .ph img,.mas'));px.forEach(function(e){e.classList.add('px')});
